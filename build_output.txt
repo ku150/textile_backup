@@ -1,0 +1,849 @@
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/C:/Users/juanj/.gradle/wrapper/dists/gradle-9.2.1-bin/2t0n5ozlw9xmuyvbp7dnzaxug/gradle-9.2.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.2.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Fabric Loom: 1.15.5
+
+> Task :compileJava
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\create\StartBackupCommand.java:23: error: package net.minecraft.command.permission does not exist
+import net.minecraft.command.permission.Permission;
+                                       ^
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\create\StartBackupCommand.java:24: error: package net.minecraft.command.permission does not exist
+import net.minecraft.command.permission.PermissionLevel;
+                                       ^
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\create\StartBackupCommand.java:25: error: package net.minecraft.command.permission does not exist
+import net.minecraft.command.permission.PermissionPredicate;
+                                       ^
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\restore\RestoreContext.java:21: error: package net.minecraft.entity.player does not exist
+import net.minecraft.entity.player.PlayerEntity;
+                                  ^
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:23: error: package net.minecraft.server.world does not exist
+import net.minecraft.server.world.ServerLevel;
+                                 ^
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:5: error: package net.minecraft.server.world does not exist
+import net.minecraft.server.world.ServerLevel;
+                                 ^
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:12: error: cannot find symbol
+	private final Set<ResourceKey<World>> data;
+	                              ^
+  symbol:   class World
+  location: class WorldSavingState
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:14: error: cannot find symbol
+	private WorldSavingState(Set<ResourceKey<World>> data) {
+	                                         ^
+  symbol:   class World
+  location: class WorldSavingState
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\mixin\DedicatedServerWatchdogMixin.java:21: error: cannot find symbol
+import net.minecraft.server.dedicated.DedicatedServerWatchdog;
+                                     ^
+  symbol:   class DedicatedServerWatchdog
+  location: package net.minecraft.server.dedicated
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\mixin\MinecraftServerSessionAccessor.java:22: error: cannot find symbol
+import net.minecraft.world.level.storage.LevelStorage;
+                                        ^
+  symbol:   class LevelStorage
+  location: package net.minecraft.world.level.storage
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\mixin\MinecraftServerSessionAccessor.java:29: error: package LevelStorage does not exist
+	LevelStorage.Session getSession();
+	            ^
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\test\BalticHashTest.java:21: error: package net.minecraft.util.math.random does not exist
+import net.minecraft.util.math.random.Random;
+                                     ^
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\test\BalticHashTest.java:45: error: cannot find symbol
+    static long randomHash(byte[] data, Random r) {
+                                        ^
+  symbol:   class Random
+  location: class BalticHashTest
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\mixin\DedicatedServerWatchdogMixin.java:32: error: cannot find symbol
+@Mixin(DedicatedServerWatchdog.class)
+       ^
+  symbol: class DedicatedServerWatchdog
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileLogger.java:50: error: cannot find symbol
+        this.prefixText = Component.literal(this.prefix).styled(style -> style.withColor(0x5B23DA));
+                                                        ^
+  symbol:   method styled((style)->s[...]2954))
+  location: class MutableComponent
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileLogger.java:93: error: cannot find symbol
+            if(level.intLevel() == Level.TRACE.intLevel()) text.formatted(ChatFormatting.GREEN);
+                                                               ^
+  symbol:   method formatted(ChatFormatting)
+  location: variable text of type MutableComponent
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileLogger.java:94: error: cannot find symbol
+            else if(level.intLevel() <= Level.WARN.intLevel()) text.formatted(ChatFormatting.RED);
+                                                                   ^
+  symbol:   method formatted(ChatFormatting)
+  location: variable text of type MutableComponent
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileLogger.java:95: error: cannot find symbol
+            else text.formatted(ChatFormatting.WHITE);
+                     ^
+  symbol:   method formatted(ChatFormatting)
+  location: variable text of type MutableComponent
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileLogger.java:97: error: cannot find symbol
+            source.sendFeedback(() -> prefixText.copy().append(text), false);
+                  ^
+  symbol:   method sendFeedback(()->prefix[...]text),boolean)
+  location: variable source of type CommandSourceStack
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\create\ExecutableBackup.java:82: error: cannot find symbol
+            server.submitAndJoin(() -> {
+                  ^
+  symbol:   method submitAndJoin(()->{ if ([...])); })
+  location: record component server of type MinecraftServer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\create\ExecutableBackup.java:88: error: cannot find symbol
+                    server.saveAll(true, true, false);
+                          ^
+  symbol:   method saveAll(boolean,boolean,boolean)
+  location: record component server of type MinecraftServer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:75: error: cannot find symbol
+		if(config.get().playerBlacklist.contains(player.getNameForScoreboard())) {
+		                                               ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:76: error: cannot find symbol
+			log.sendInfo(ctx.getSource(), "Player: {} is already blacklisted.", player.getNameForScoreboard());
+			                                                                          ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:78: error: cannot find symbol
+			config.get().playerBlacklist.add(player.getNameForScoreboard());
+			                                       ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:84: error: cannot find symbol
+			builder.append(player.getNameForScoreboard());
+			                     ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:87: error: cannot find symbol
+			if(config.get().playerWhitelist.contains(player.getNameForScoreboard())){
+			                                               ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:88: error: cannot find symbol
+				config.get().playerWhitelist.remove(player.getNameForScoreboard());
+				                                          ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:95: error: cannot find symbol
+			ctx.getSource().getServer().getCommandManager().sendCommandTree(player);
+			                           ^
+  symbol:   method getCommandManager()
+  location: class MinecraftServer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:106: error: cannot find symbol
+		if(!config.get().playerBlacklist.contains(player.getNameForScoreboard())) {
+		                                                ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:107: error: cannot find symbol
+			log.sendInfo(ctx.getSource(), "Player: {} newer was blacklisted.", player.getNameForScoreboard());
+			                                                                         ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:109: error: cannot find symbol
+			config.get().playerBlacklist.remove(player.getNameForScoreboard());
+			                                          ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:112: error: cannot find symbol
+			ctx.getSource().getServer().getCommandManager().sendCommandTree(player);
+			                           ^
+  symbol:   method getCommandManager()
+  location: class MinecraftServer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:114: error: cannot find symbol
+			log.sendInfo(ctx.getSource(), "Player: {} removed from the blacklist successfully.", player.getNameForScoreboard());
+			                                                                                           ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:75: error: cannot find symbol
+		if(config.get().playerWhitelist.contains(player.getNameForScoreboard())) {
+		                                               ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:76: error: cannot find symbol
+			log.sendInfo(ctx.getSource(), "Player: {} is already whitelisted.", player.getNameForScoreboard());
+			                                                                          ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:78: error: cannot find symbol
+			config.get().playerWhitelist.add(player.getNameForScoreboard());
+			                                       ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:84: error: cannot find symbol
+			builder.append(player.getNameForScoreboard());
+			                     ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:87: error: cannot find symbol
+			if(config.get().playerBlacklist.contains(player.getNameForScoreboard())){
+			                                               ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:88: error: cannot find symbol
+				config.get().playerBlacklist.remove(player.getNameForScoreboard());
+				                                          ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:95: error: cannot find symbol
+			ctx.getSource().getServer().getCommandManager().sendCommandTree(player);
+			                           ^
+  symbol:   method getCommandManager()
+  location: class MinecraftServer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:106: error: cannot find symbol
+		if(!config.get().playerWhitelist.contains(player.getNameForScoreboard())) {
+		                                                ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:107: error: cannot find symbol
+			log.sendInfo(ctx.getSource(), "Player: {} newer was whitelisted.", player.getNameForScoreboard());
+			                                                                         ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:109: error: cannot find symbol
+			config.get().playerWhitelist.remove(player.getNameForScoreboard());
+			                                          ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:112: error: cannot find symbol
+			ctx.getSource().getServer().getCommandManager().sendCommandTree(player);
+			                           ^
+  symbol:   method getCommandManager()
+  location: class MinecraftServer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:114: error: cannot find symbol
+			log.sendInfo(ctx.getSource(), "Player: {} removed from the whitelist successfully.", player.getNameForScoreboard());
+			                                                                                           ^
+  symbol:   method getNameForScoreboard()
+  location: variable player of type ServerPlayer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\restore\KillRestoreCommand.java:47: error: cannot find symbol
+                            "Player: " + ctx.getSource().getName() :
+                                                        ^
+  symbol:   method getName()
+  location: class CommandSourceStack
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\restore\RestoreContext.java:70: error: cannot find symbol
+            ActionInitiator initiator = serverCommandSource.getEntity() instanceof PlayerEntity ? ActionInitiator.Player : ActionInitiator.ServerConsole;
+                                                                                   ^
+  symbol:   class PlayerEntity
+  location: class Builder
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\create\BackupScheduler.java:50: error: cannot find symbol
+        if(config.get().doBackupsOnEmptyServer || server.getPlayerManager().getCurrentPlayerCount() > 0) {
+                                                        ^
+  symbol:   method getPlayerManager()
+  location: variable server of type MinecraftServer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\create\BackupScheduler.java:73: error: cannot find symbol
+        } else if(!config.get().doBackupsOnEmptyServer && server.getPlayerManager().getCurrentPlayerCount() == 0) {
+                                                                ^
+  symbol:   method getPlayerManager()
+  location: variable server of type MinecraftServer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\restore\RestoreBackupRunnable.java:59: error: cannot find symbol
+        ctx.server().stop(false);
+                    ^
+  symbol:   method stop(boolean)
+  location: class MinecraftServer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\restore\RestoreBackupRunnable.java:66: error: cannot find symbol
+                    ctx.server().getRunDirectory().toAbsolutePath(),
+                                ^
+  symbol:   method getRunDirectory()
+  location: class MinecraftServer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\restore\RestoreBackupRunnable.java:77: error: cannot find symbol
+            ctx.server().getThread().join(); //wait for server thread to die and save all its state
+                        ^
+  symbol:   method getThread()
+  location: class MinecraftServer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\restore\RestoreHelper.java:66: error: cannot find symbol
+            log.info("Backup restoration was initiated by: {}", ctx.commandSource().getName());
+                                                                                   ^
+  symbol:   method getName()
+  location: class CommandSourceStack
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:48: error: cannot find symbol
+	public static boolean wasSentByPlayer(CommandSourceStack source) { return source.isExecutedByPlayer(); }
+	                                                                                ^
+  symbol:   method isExecutedByPlayer()
+  location: variable source of type CommandSourceStack
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:52: error: cannot find symbol
+		message.append(Component.literal(msg).formatted(ChatFormatting.WHITE));
+		                                     ^
+  symbol:   method formatted(ChatFormatting)
+  location: class MutableComponent
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:54: error: cannot find symbol
+		server.getPlayerManager().broadcast(message, false);
+		      ^
+  symbol:   method getPlayerManager()
+  location: variable server of type MinecraftServer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:64: error: cannot find symbol
+				.getWorldDirectory(World.OVERWORLD);
+				                   ^
+  symbol:   variable World
+  location: class Utilities
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:84: error: cannot find symbol
+		for (ServerLevel serverWorld : server.getWorlds()) {
+		                                     ^
+  symbol:   method getWorlds()
+  location: variable server of type MinecraftServer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:84: error: cannot find symbol
+		for (ServerLevel serverWorld : server.getWorlds()) {
+		     ^
+  symbol:   class ServerLevel
+  location: class Utilities
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:91: error: cannot find symbol
+		for (ServerLevel serverWorld : server.getWorlds()) {
+		                                     ^
+  symbol:   method getWorlds()
+  location: variable server of type MinecraftServer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:91: error: cannot find symbol
+		for (ServerLevel serverWorld : server.getWorlds()) {
+		     ^
+  symbol:   class ServerLevel
+  location: class Utilities
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:19: error: cannot find symbol
+		Set<ResourceKey<World>> data = new HashSet<>();
+		                ^
+  symbol:   class World
+  location: class WorldSavingState
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:19: error: incompatible types: cannot infer type arguments for HashSet<>
+		Set<ResourceKey<World>> data = new HashSet<>();
+		                                          ^
+    reason: inferred type does not conform to equality constraint(s)
+      inferred: Object
+      equality constraints(s): ResourceKey<World>
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:21: error: cannot find symbol
+		for (ServerLevel serverWorld : server.getWorlds()) {
+		                                     ^
+  symbol:   method getWorlds()
+  location: variable server of type MinecraftServer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:21: error: cannot find symbol
+		for (ServerLevel serverWorld : server.getWorlds()) {
+		     ^
+  symbol:   class ServerLevel
+  location: class WorldSavingState
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:30: error: cannot find symbol
+		for (ServerLevel serverWorld : server.getWorlds()) {
+		                                     ^
+  symbol:   method getWorlds()
+  location: variable server of type MinecraftServer
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:30: error: cannot find symbol
+		for (ServerLevel serverWorld : server.getWorlds()) {
+		     ^
+  symbol:   class ServerLevel
+  location: class WorldSavingState
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\mixin\DedicatedServerWatchdogMixin.java:37: error: cannot find symbol
+        return Globals.INSTANCE.disableWatchdog ? Util.getMeasuringTimeNano() : original;
+                                                      ^
+  symbol:   method getMeasuringTimeNano()
+  location: class Util
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\test\BalticHashTest.java:31: error: cannot find symbol
+        Random r = Random.create(2137);
+        ^
+  symbol:   class Random
+  location: class BalticHashTest
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\test\BalticHashTest.java:31: error: cannot find symbol
+        Random r = Random.create(2137);
+                   ^
+  symbol:   variable Random
+  location: class BalticHashTest
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:68: error: cannot find symbol
+            case "ops"     -> Commands.GAMEMASTERS_CHECK.allows(s.getPermissions());
+                                      ^
+  symbol:   variable GAMEMASTERS_CHECK
+  location: class Commands
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:68: error: cannot find symbol
+            case "ops"     -> Commands.GAMEMASTERS_CHECK.allows(s.getPermissions());
+                                                                 ^
+  symbol:   method getPermissions()
+  location: variable s of type CommandSourceStack
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:69: error: cannot find symbol
+            case "2"       -> Commands.GAMEMASTERS_CHECK.allows(s.getPermissions());
+                                      ^
+  symbol:   variable GAMEMASTERS_CHECK
+  location: class Commands
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:69: error: cannot find symbol
+            case "2"       -> Commands.GAMEMASTERS_CHECK.allows(s.getPermissions());
+                                                                 ^
+  symbol:   method getPermissions()
+  location: variable s of type CommandSourceStack
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:70: error: cannot find symbol
+            case "1"       -> Commands.MODERATORS_CHECK.allows(s.getPermissions());
+                                      ^
+  symbol:   variable MODERATORS_CHECK
+  location: class Commands
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:70: error: cannot find symbol
+            case "1"       -> Commands.MODERATORS_CHECK.allows(s.getPermissions());
+                                                                ^
+  symbol:   method getPermissions()
+  location: variable s of type CommandSourceStack
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:71: error: cannot find symbol
+            case "3"       -> Commands.ADMINS_CHECK.allows(s.getPermissions());
+                                      ^
+  symbol:   variable ADMINS_CHECK
+  location: class Commands
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:71: error: cannot find symbol
+            case "3"       -> Commands.ADMINS_CHECK.allows(s.getPermissions());
+                                                            ^
+  symbol:   method getPermissions()
+  location: variable s of type CommandSourceStack
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:72: error: cannot find symbol
+            case "4"       -> Commands.OWNERS_CHECK.allows(s.getPermissions());
+                                      ^
+  symbol:   variable OWNERS_CHECK
+  location: class Commands
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:72: error: cannot find symbol
+            case "4"       -> Commands.OWNERS_CHECK.allows(s.getPermissions());
+                                                            ^
+  symbol:   method getPermissions()
+  location: variable s of type CommandSourceStack
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:75: error: cannot find symbol
+            case "0" -> Commands.ALWAYS_PASS_CHECK.allows(s.getPermissions());
+                                ^
+  symbol:   variable ALWAYS_PASS_CHECK
+  location: class Commands
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:75: error: cannot find symbol
+            case "0" -> Commands.ALWAYS_PASS_CHECK.allows(s.getPermissions());
+                                                           ^
+  symbol:   method getPermissions()
+  location: variable s of type CommandSourceStack
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:123: error: cannot find symbol
+                                        return ((config.get().playerWhitelist.contains(ctx.getEntityOrThrow().getNameForScoreboard()) ||
+                                                                                          ^
+  symbol:   method getEntityOrThrow()
+  location: variable ctx of type CommandSourceStack
+C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:125: error: cannot find symbol
+                                                !config.get().playerBlacklist.contains(ctx.getEntityOrThrow().getNameForScoreboard())) ||
+                                                                                          ^
+  symbol:   method getEntityOrThrow()
+  location: variable ctx of type CommandSourceStack
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+84 errors
+
+> Task :compileJava FAILED
+
+[Incubating] Problems report is available at: file:///C:/Users/juanj/IdeaProjects/textile_backup/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler output below.
+  Note: Recompile with -Xlint:deprecation for details.
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:19: error: incompatible types: cannot infer type arguments for HashSet<>
+  		Set<ResourceKey<World>> data = new HashSet<>();
+  		                                          ^
+      reason: inferred type does not conform to equality constraint(s)
+        inferred: Object
+        equality constraints(s): ResourceKey<World>
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:12: error: cannot find symbol
+  	private final Set<ResourceKey<World>> data;
+  	                              ^
+    symbol:   class World
+    location: class WorldSavingState
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:14: error: cannot find symbol
+  	private WorldSavingState(Set<ResourceKey<World>> data) {
+  	                                         ^
+    symbol:   class World
+    location: class WorldSavingState
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\mixin\DedicatedServerWatchdogMixin.java:21: error: cannot find symbol
+  import net.minecraft.server.dedicated.DedicatedServerWatchdog;
+                                       ^
+    symbol:   class DedicatedServerWatchdog
+    location: package net.minecraft.server.dedicated
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\mixin\MinecraftServerSessionAccessor.java:22: error: cannot find symbol
+  import net.minecraft.world.level.storage.LevelStorage;
+                                          ^
+    symbol:   class LevelStorage
+    location: package net.minecraft.world.level.storage
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\test\BalticHashTest.java:45: error: cannot find symbol
+      static long randomHash(byte[] data, Random r) {
+                                          ^
+    symbol:   class Random
+    location: class BalticHashTest
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\restore\RestoreContext.java:70: error: cannot find symbol
+              ActionInitiator initiator = serverCommandSource.getEntity() instanceof PlayerEntity ? ActionInitiator.Player : ActionInitiator.ServerConsole;
+                                                                                     ^
+    symbol:   class PlayerEntity
+    location: class Builder
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:64: error: cannot find symbol
+  				.getWorldDirectory(World.OVERWORLD);
+  				                   ^
+    symbol:   variable World
+    location: class Utilities
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:84: error: cannot find symbol
+  		for (ServerLevel serverWorld : server.getWorlds()) {
+  		     ^
+    symbol:   class ServerLevel
+    location: class Utilities
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:91: error: cannot find symbol
+  		for (ServerLevel serverWorld : server.getWorlds()) {
+  		     ^
+    symbol:   class ServerLevel
+    location: class Utilities
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:19: error: cannot find symbol
+  		Set<ResourceKey<World>> data = new HashSet<>();
+  		                ^
+    symbol:   class World
+    location: class WorldSavingState
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:21: error: cannot find symbol
+  		for (ServerLevel serverWorld : server.getWorlds()) {
+  		     ^
+    symbol:   class ServerLevel
+    location: class WorldSavingState
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:30: error: cannot find symbol
+  		for (ServerLevel serverWorld : server.getWorlds()) {
+  		     ^
+    symbol:   class ServerLevel
+    location: class WorldSavingState
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\test\BalticHashTest.java:31: error: cannot find symbol
+          Random r = Random.create(2137);
+          ^
+    symbol:   class Random
+    location: class BalticHashTest
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\test\BalticHashTest.java:31: error: cannot find symbol
+          Random r = Random.create(2137);
+                     ^
+    symbol:   variable Random
+    location: class BalticHashTest
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:68: error: cannot find symbol
+              case "ops"     -> Commands.GAMEMASTERS_CHECK.allows(s.getPermissions());
+                                        ^
+    symbol:   variable GAMEMASTERS_CHECK
+    location: class Commands
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:69: error: cannot find symbol
+              case "2"       -> Commands.GAMEMASTERS_CHECK.allows(s.getPermissions());
+                                        ^
+    symbol:   variable GAMEMASTERS_CHECK
+    location: class Commands
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:70: error: cannot find symbol
+              case "1"       -> Commands.MODERATORS_CHECK.allows(s.getPermissions());
+                                        ^
+    symbol:   variable MODERATORS_CHECK
+    location: class Commands
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:71: error: cannot find symbol
+              case "3"       -> Commands.ADMINS_CHECK.allows(s.getPermissions());
+                                        ^
+    symbol:   variable ADMINS_CHECK
+    location: class Commands
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:72: error: cannot find symbol
+              case "4"       -> Commands.OWNERS_CHECK.allows(s.getPermissions());
+                                        ^
+    symbol:   variable OWNERS_CHECK
+    location: class Commands
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:75: error: cannot find symbol
+              case "0" -> Commands.ALWAYS_PASS_CHECK.allows(s.getPermissions());
+                                  ^
+    symbol:   variable ALWAYS_PASS_CHECK
+    location: class Commands
+  Note: Some input files use or override a deprecated API.
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\mixin\DedicatedServerWatchdogMixin.java:32: error: cannot find symbol
+  @Mixin(DedicatedServerWatchdog.class)
+         ^
+    symbol: class DedicatedServerWatchdog
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileLogger.java:50: error: cannot find symbol
+          this.prefixText = Component.literal(this.prefix).styled(style -> style.withColor(0x5B23DA));
+                                                          ^
+    symbol:   method styled((style)->s[...]2954))
+    location: class MutableComponent
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileLogger.java:93: error: cannot find symbol
+              if(level.intLevel() == Level.TRACE.intLevel()) text.formatted(ChatFormatting.GREEN);
+                                                                 ^
+    symbol:   method formatted(ChatFormatting)
+    location: variable text of type MutableComponent
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileLogger.java:94: error: cannot find symbol
+              else if(level.intLevel() <= Level.WARN.intLevel()) text.formatted(ChatFormatting.RED);
+                                                                     ^
+    symbol:   method formatted(ChatFormatting)
+    location: variable text of type MutableComponent
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileLogger.java:95: error: cannot find symbol
+              else text.formatted(ChatFormatting.WHITE);
+                       ^
+    symbol:   method formatted(ChatFormatting)
+    location: variable text of type MutableComponent
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileLogger.java:97: error: cannot find symbol
+              source.sendFeedback(() -> prefixText.copy().append(text), false);
+                    ^
+    symbol:   method sendFeedback(()->prefix[...]text),boolean)
+    location: variable source of type CommandSourceStack
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\create\ExecutableBackup.java:82: error: cannot find symbol
+              server.submitAndJoin(() -> {
+                    ^
+    symbol:   method submitAndJoin(()->{ if ([...])); })
+    location: record component server of type MinecraftServer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\create\ExecutableBackup.java:88: error: cannot find symbol
+                      server.saveAll(true, true, false);
+                            ^
+    symbol:   method saveAll(boolean,boolean,boolean)
+    location: record component server of type MinecraftServer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:75: error: cannot find symbol
+  		if(config.get().playerBlacklist.contains(player.getNameForScoreboard())) {
+  		                                               ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:76: error: cannot find symbol
+  			log.sendInfo(ctx.getSource(), "Player: {} is already blacklisted.", player.getNameForScoreboard());
+  			                                                                          ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:78: error: cannot find symbol
+  			config.get().playerBlacklist.add(player.getNameForScoreboard());
+  			                                       ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:84: error: cannot find symbol
+  			builder.append(player.getNameForScoreboard());
+  			                     ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:87: error: cannot find symbol
+  			if(config.get().playerWhitelist.contains(player.getNameForScoreboard())){
+  			                                               ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:88: error: cannot find symbol
+  				config.get().playerWhitelist.remove(player.getNameForScoreboard());
+  				                                          ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:95: error: cannot find symbol
+  			ctx.getSource().getServer().getCommandManager().sendCommandTree(player);
+  			                           ^
+    symbol:   method getCommandManager()
+    location: class MinecraftServer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:106: error: cannot find symbol
+  		if(!config.get().playerBlacklist.contains(player.getNameForScoreboard())) {
+  		                                                ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:107: error: cannot find symbol
+  			log.sendInfo(ctx.getSource(), "Player: {} newer was blacklisted.", player.getNameForScoreboard());
+  			                                                                         ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:109: error: cannot find symbol
+  			config.get().playerBlacklist.remove(player.getNameForScoreboard());
+  			                                          ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:112: error: cannot find symbol
+  			ctx.getSource().getServer().getCommandManager().sendCommandTree(player);
+  			                           ^
+    symbol:   method getCommandManager()
+    location: class MinecraftServer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\BlacklistCommand.java:114: error: cannot find symbol
+  			log.sendInfo(ctx.getSource(), "Player: {} removed from the blacklist successfully.", player.getNameForScoreboard());
+  			                                                                                           ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:75: error: cannot find symbol
+  		if(config.get().playerWhitelist.contains(player.getNameForScoreboard())) {
+  		                                               ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:76: error: cannot find symbol
+  			log.sendInfo(ctx.getSource(), "Player: {} is already whitelisted.", player.getNameForScoreboard());
+  			                                                                          ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:78: error: cannot find symbol
+  			config.get().playerWhitelist.add(player.getNameForScoreboard());
+  			                                       ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:84: error: cannot find symbol
+  			builder.append(player.getNameForScoreboard());
+  			                     ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:87: error: cannot find symbol
+  			if(config.get().playerBlacklist.contains(player.getNameForScoreboard())){
+  			                                               ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:88: error: cannot find symbol
+  				config.get().playerBlacklist.remove(player.getNameForScoreboard());
+  				                                          ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:95: error: cannot find symbol
+  			ctx.getSource().getServer().getCommandManager().sendCommandTree(player);
+  			                           ^
+    symbol:   method getCommandManager()
+    location: class MinecraftServer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:106: error: cannot find symbol
+  		if(!config.get().playerWhitelist.contains(player.getNameForScoreboard())) {
+  		                                                ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:107: error: cannot find symbol
+  			log.sendInfo(ctx.getSource(), "Player: {} newer was whitelisted.", player.getNameForScoreboard());
+  			                                                                         ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:109: error: cannot find symbol
+  			config.get().playerWhitelist.remove(player.getNameForScoreboard());
+  			                                          ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:112: error: cannot find symbol
+  			ctx.getSource().getServer().getCommandManager().sendCommandTree(player);
+  			                           ^
+    symbol:   method getCommandManager()
+    location: class MinecraftServer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\manage\WhitelistCommand.java:114: error: cannot find symbol
+  			log.sendInfo(ctx.getSource(), "Player: {} removed from the whitelist successfully.", player.getNameForScoreboard());
+  			                                                                                           ^
+    symbol:   method getNameForScoreboard()
+    location: variable player of type ServerPlayer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\restore\KillRestoreCommand.java:47: error: cannot find symbol
+                              "Player: " + ctx.getSource().getName() :
+                                                          ^
+    symbol:   method getName()
+    location: class CommandSourceStack
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\create\BackupScheduler.java:50: error: cannot find symbol
+          if(config.get().doBackupsOnEmptyServer || server.getPlayerManager().getCurrentPlayerCount() > 0) {
+                                                          ^
+    symbol:   method getPlayerManager()
+    location: variable server of type MinecraftServer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\create\BackupScheduler.java:73: error: cannot find symbol
+          } else if(!config.get().doBackupsOnEmptyServer && server.getPlayerManager().getCurrentPlayerCount() == 0) {
+                                                                  ^
+    symbol:   method getPlayerManager()
+    location: variable server of type MinecraftServer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\restore\RestoreBackupRunnable.java:59: error: cannot find symbol
+          ctx.server().stop(false);
+                      ^
+    symbol:   method stop(boolean)
+    location: class MinecraftServer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\restore\RestoreBackupRunnable.java:66: error: cannot find symbol
+                      ctx.server().getRunDirectory().toAbsolutePath(),
+                                  ^
+    symbol:   method getRunDirectory()
+    location: class MinecraftServer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\restore\RestoreBackupRunnable.java:77: error: cannot find symbol
+              ctx.server().getThread().join(); //wait for server thread to die and save all its state
+                          ^
+    symbol:   method getThread()
+    location: class MinecraftServer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\restore\RestoreHelper.java:66: error: cannot find symbol
+              log.info("Backup restoration was initiated by: {}", ctx.commandSource().getName());
+                                                                                     ^
+    symbol:   method getName()
+    location: class CommandSourceStack
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:48: error: cannot find symbol
+  	public static boolean wasSentByPlayer(CommandSourceStack source) { return source.isExecutedByPlayer(); }
+  	                                                                                ^
+    symbol:   method isExecutedByPlayer()
+    location: variable source of type CommandSourceStack
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:52: error: cannot find symbol
+  		message.append(Component.literal(msg).formatted(ChatFormatting.WHITE));
+  		                                     ^
+    symbol:   method formatted(ChatFormatting)
+    location: class MutableComponent
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:54: error: cannot find symbol
+  		server.getPlayerManager().broadcast(message, false);
+  		      ^
+    symbol:   method getPlayerManager()
+    location: variable server of type MinecraftServer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:84: error: cannot find symbol
+  		for (ServerLevel serverWorld : server.getWorlds()) {
+  		                                     ^
+    symbol:   method getWorlds()
+    location: variable server of type MinecraftServer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:91: error: cannot find symbol
+  		for (ServerLevel serverWorld : server.getWorlds()) {
+  		                                     ^
+    symbol:   method getWorlds()
+    location: variable server of type MinecraftServer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:21: error: cannot find symbol
+  		for (ServerLevel serverWorld : server.getWorlds()) {
+  		                                     ^
+    symbol:   method getWorlds()
+    location: variable server of type MinecraftServer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:30: error: cannot find symbol
+  		for (ServerLevel serverWorld : server.getWorlds()) {
+  		                                     ^
+    symbol:   method getWorlds()
+    location: variable server of type MinecraftServer
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\mixin\DedicatedServerWatchdogMixin.java:37: error: cannot find symbol
+          return Globals.INSTANCE.disableWatchdog ? Util.getMeasuringTimeNano() : original;
+                                                        ^
+    symbol:   method getMeasuringTimeNano()
+    location: class Util
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:68: error: cannot find symbol
+              case "ops"     -> Commands.GAMEMASTERS_CHECK.allows(s.getPermissions());
+                                                                   ^
+    symbol:   method getPermissions()
+    location: variable s of type CommandSourceStack
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:69: error: cannot find symbol
+              case "2"       -> Commands.GAMEMASTERS_CHECK.allows(s.getPermissions());
+                                                                   ^
+    symbol:   method getPermissions()
+    location: variable s of type CommandSourceStack
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:70: error: cannot find symbol
+              case "1"       -> Commands.MODERATORS_CHECK.allows(s.getPermissions());
+                                                                  ^
+    symbol:   method getPermissions()
+    location: variable s of type CommandSourceStack
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:71: error: cannot find symbol
+              case "3"       -> Commands.ADMINS_CHECK.allows(s.getPermissions());
+                                                              ^
+    symbol:   method getPermissions()
+    location: variable s of type CommandSourceStack
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:72: error: cannot find symbol
+              case "4"       -> Commands.OWNERS_CHECK.allows(s.getPermissions());
+                                                              ^
+    symbol:   method getPermissions()
+    location: variable s of type CommandSourceStack
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:75: error: cannot find symbol
+              case "0" -> Commands.ALWAYS_PASS_CHECK.allows(s.getPermissions());
+                                                             ^
+    symbol:   method getPermissions()
+    location: variable s of type CommandSourceStack
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:123: error: cannot find symbol
+                                          return ((config.get().playerWhitelist.contains(ctx.getEntityOrThrow().getNameForScoreboard()) ||
+                                                                                            ^
+    symbol:   method getEntityOrThrow()
+    location: variable ctx of type CommandSourceStack
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\TextileBackup.java:125: error: cannot find symbol
+                                                  !config.get().playerBlacklist.contains(ctx.getEntityOrThrow().getNameForScoreboard())) ||
+                                                                                            ^
+    symbol:   method getEntityOrThrow()
+    location: variable ctx of type CommandSourceStack
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\create\StartBackupCommand.java:23: error: package net.minecraft.command.permission does not exist
+  import net.minecraft.command.permission.Permission;
+                                         ^
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\create\StartBackupCommand.java:24: error: package net.minecraft.command.permission does not exist
+  import net.minecraft.command.permission.PermissionLevel;
+                                         ^
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\commands\create\StartBackupCommand.java:25: error: package net.minecraft.command.permission does not exist
+  import net.minecraft.command.permission.PermissionPredicate;
+                                         ^
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\restore\RestoreContext.java:21: error: package net.minecraft.entity.player does not exist
+  import net.minecraft.entity.player.PlayerEntity;
+                                    ^
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\Utilities.java:23: error: package net.minecraft.server.world does not exist
+  import net.minecraft.server.world.ServerLevel;
+                                   ^
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\core\WorldSavingState.java:5: error: package net.minecraft.server.world does not exist
+  import net.minecraft.server.world.ServerLevel;
+                                   ^
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\mixin\MinecraftServerSessionAccessor.java:29: error: package LevelStorage does not exist
+  	LevelStorage.Session getSession();
+  	            ^
+  C:\Users\juanj\IdeaProjects\textile_backup\src\main\java\net\szum123321\textile_backup\test\BalticHashTest.java:21: error: package net.minecraft.util.math.random does not exist
+  import net.minecraft.util.math.random.Random;
+                                       ^
+  84 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to generate a Build Scan (powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.2.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 9s
+1 actionable task: 1 executed

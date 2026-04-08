@@ -23,9 +23,10 @@ import com.terraformersmc.modmenu.api.ModMenuApi;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.szum123321.textile_backup.config.ConfigPOJO;
 
-public class ModMenuEntry implements ModMenuApi {
+/*public class ModMenuEntry implements ModMenuApi {
     @Override
+    @SuppressWarnings("deprecation")
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
         return parent -> AutoConfig.getConfigScreen(ConfigPOJO.class, parent).get();
     }
-}
+}*/

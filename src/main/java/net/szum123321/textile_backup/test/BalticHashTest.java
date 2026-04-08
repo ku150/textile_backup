@@ -18,17 +18,18 @@
 
 package net.szum123321.textile_backup.test;
 
-import net.minecraft.util.math.random.Random;
 import net.szum123321.textile_backup.TextileBackup;
 import net.szum123321.textile_backup.TextileLogger;
 import net.szum123321.textile_backup.core.digest.BalticHash;
+
+import java.util.Random;
 
 public class BalticHashTest {
     private final static TextileLogger log = new TextileLogger(TextileBackup.MOD_NAME);
     final static int TEST_LEN = 21377; //simple prime
     public static void run() throws RuntimeException {
         log.info("Running hash test");
-        Random r = Random.create(2137);
+        Random r = new Random(2137L);
         long x = 0;
 
         byte[] data = new byte[TEST_LEN];
@@ -47,17 +48,21 @@ public class BalticHashTest {
 
         BalticHash h = new BalticHash();
 
-        int m = r.nextBetween(1, n);
+        int m = nextBetween(r, 1, n);
 
         int nn = n, p = 0;
 
         for(int i = 0; i < m; i++) {
-            int k = r.nextBetween(1, nn - (m - i - 1));
+            int k = nextBetween(r, 1, nn - (m - i - 1));
             h.update(data, p, k);
             p += k;
             nn -= k;
         }
 
         return h.getValue();
+    }
+
+    private static int nextBetween(Random r, int minInclusive, int maxInclusive) {
+        return minInclusive + r.nextInt(maxInclusive - minInclusive + 1);
     }
 }
