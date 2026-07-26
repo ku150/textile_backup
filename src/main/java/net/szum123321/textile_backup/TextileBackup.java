@@ -42,7 +42,7 @@ import net.szum123321.textile_backup.core.ActionInitiator;
 import net.szum123321.textile_backup.core.create.BackupScheduler;
 import net.szum123321.textile_backup.core.create.ExecutableBackup;
 
-import static net.szum123321.textile_backup.util.CommandUtil.canUseCommand;
+import net.szum123321.textile_backup.util.CommandUtil;
 
 public class TextileBackup implements ModInitializer {
     public static final String MOD_NAME = "Textile Backup";
@@ -95,7 +95,7 @@ public class TextileBackup implements ModInitializer {
                         .requires((ctx) -> {
                                     try { //Check if player is whitelisted and not blacklisted and has required permission level
                                         return ((config.get().playerWhitelist.contains(ctx.getEntityOrException().getScoreboardName()) ||
-                                                canUseCommand(ctx, config.get().permissionLevel)) &&
+                                                CommandUtil.canUseCommand(ctx, config.get().permissionLevel)) &&
                                                 !config.get().playerBlacklist.contains(ctx.getEntityOrException().getScoreboardName())) ||
                                                 (ctx.getServer().isSingleplayer() &&
                                                         config.get().alwaysSingleplayerAllowed);

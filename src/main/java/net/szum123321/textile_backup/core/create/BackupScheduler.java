@@ -43,9 +43,21 @@ public class BackupScheduler {
     private static boolean scheduled = false;
     private static long nextBackup = - 1;
 
+    private static long lastTickTime = -1;
+
+    private final static long PAUSE_THRESHOLD_SECONDS = 5;
+
     public static void tick(MinecraftServer server) {
-        if(config.get().backupInterval < 1 || server.isPaused()) return;
+        if(config.get().backupInterval < 1) return;
         long now = Instant.now().getEpochSecond();
+
+        if(lastTickTime != -1){
+            long gap = now - lastTickTime;
+            if(gap > PAUSE_THRESHOLD_SECONDS && nextBackup == -1){
+                nextBackup += gap; //If server paused skip paused time for schedule next backup.
+            }
+        }
+        lastTickTime = now;
 
         if(config.get().doBackupsOnEmptyServer || server.getPlayerCount() > 0) {
             //Either just run backup with no one playing or there's at least one player
