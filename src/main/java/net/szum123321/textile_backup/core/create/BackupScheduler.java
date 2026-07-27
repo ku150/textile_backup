@@ -20,6 +20,8 @@ package net.szum123321.textile_backup.core.create;
 
 import net.minecraft.server.MinecraftServer;
 import net.szum123321.textile_backup.Globals;
+import net.szum123321.textile_backup.TextileBackup;
+import net.szum123321.textile_backup.TextileLogger;
 import net.szum123321.textile_backup.config.ConfigHelper;
 import net.szum123321.textile_backup.core.ActionInitiator;
 
@@ -38,6 +40,7 @@ import java.time.Instant;
  */
 public class BackupScheduler {
     private final static ConfigHelper config = ConfigHelper.INSTANCE;
+    private final static TextileLogger log = new TextileLogger(TextileBackup.MOD_NAME);
 
     //Scheduled flag tells whether we have decided to run another backup
     private static boolean scheduled = false;
@@ -53,8 +56,9 @@ public class BackupScheduler {
 
         if(lastTickTime != -1){
             long gap = now - lastTickTime;
-            if(gap > PAUSE_THRESHOLD_SECONDS && nextBackup == -1){
+            if(gap > PAUSE_THRESHOLD_SECONDS && scheduled) {
                 nextBackup += gap; //If server paused skip paused time for schedule next backup.
+                log.info("Skipping paused time and not scheduling");
             }
         }
         lastTickTime = now;
