@@ -169,6 +169,20 @@ public class ConfigPOJO implements ConfigData {
     @ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
     public IntegrityVerificationMode integrityVerificationMode = IntegrityVerificationMode.STRICT;
 
+    @Comment("""
+             \nSets if auto start after a restore is active (requires external scripts e.g. systemd script)
+             """)
+    @ConfigEntry.Gui.NoTooltip()
+    @ConfigEntry.Category("Restore")
+    public boolean autoStartRestore = false;
+
+    @Comment("""
+             \nA path for restart after restore flag.
+             """)
+    @ConfigEntry.Gui.NoTooltip()
+    @ConfigEntry.Category("Restore")
+    public String autoStartRestorePath = ".restore_pending";
+
     @Override
     public void validatePostLoad() throws ValidationException {
         if(compressionCoreCountLimit > Runtime.getRuntime().availableProcessors())

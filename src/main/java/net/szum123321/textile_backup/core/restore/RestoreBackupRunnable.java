@@ -31,6 +31,7 @@ import net.szum123321.textile_backup.core.restore.decompressors.GenericTarDecomp
 import net.szum123321.textile_backup.core.restore.decompressors.ZipDecompressor;
 import net.szum123321.textile_backup.mixin.MinecraftServerSessionAccessor;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -154,5 +155,15 @@ public class RestoreBackupRunnable implements Runnable {
         Globals.INSTANCE.globalShutdownBackupFlag.set(true);
 
         log.info("Done!");
+
+        if (config.get().autoStartRestore) {
+            log.info("Starting restore backup...");
+            try {
+                boolean newFile = new File(config.get().autoStartRestorePath).createNewFile();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
     }
 }
