@@ -28,6 +28,7 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.Commands;
 import net.szum123321.textile_backup.commands.create.CleanupCommand;
 import net.szum123321.textile_backup.commands.create.StartBackupCommand;
 import net.szum123321.textile_backup.commands.manage.BlacklistCommand;
@@ -90,8 +91,8 @@ public class TextileBackup implements ModInitializer {
             }
         });
 
-        CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> dispatcher.register(
-                LiteralArgumentBuilder.<CommandSourceStack>literal("backup")
+        CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
+                dispatcher.register(Commands.literal("backup")
                         .requires((ctx) -> {
                                     try { //Check if player is whitelisted and not blacklisted and has required permission level
                                         return ((config.get().playerWhitelist.contains(ctx.getEntityOrException().getScoreboardName()) ||
